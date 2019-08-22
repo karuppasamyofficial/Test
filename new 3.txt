@@ -1,0 +1,4 @@
+Setting the right node environment
+  definePlugin in webpack
+Minification
+   Uglify JS plugin

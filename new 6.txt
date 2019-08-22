@@ -1,0 +1,10 @@
+
+getting Scope in beanclass--------------------------------------------------------
+ADFContext.getCurrent().getSessionScope().get("page").toString().equalsIgnoreCase("buy")
+------------------------------------------------------------------------------------------
+getting estimated Row count---------
+conSearchHdrVO.getEstimatedRowCount()
+-----------------------------------------------------------------------------------
+finding component using ADFPage----------
+ var pg2 = AdfPage.PAGE.findComponent('r1:0:pt1:commandButton5');
+ --------------------------------------------------------------------------------

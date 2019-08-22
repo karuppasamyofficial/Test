@@ -1,0 +1,37 @@
+https://reactjsexample.com/a-way-to-quickly-add-a-react-progress-bar-to-your-app/
+https://reactjsexample.com/progress-bar-for-react-and-redux-applications/
+https://gist.github.com/javilobo8/097c30a233786be52070986d8cdb1743
+
+
+https://js.devexpress.com/Documentation/Guide/Widgets/Lookup/Overview/
+
+https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/guides/view-switching/
+
+
+https://github.com/rdcalle/react-export-excel/blob/HEAD/examples/with_custom_download_element.md
+https://github.com/rdcalle/react-export-excel/blob/HEAD/examples/with_custom_download_element.md
+
+https://www.npmjs.com/package/react-minimal-pie-chart
+
+https://xuopled.github.io/react-svg-piechart/
+
+
+pivot table:-------------------------------------------
+https://github.com/davidguttman/react-pivot
+https://github.com/plotly/react-pivottable
+https://github.com/plotly/react-pivottable/issues/52
+https://community.plot.ly/t/newplot-of-undefined-error-when-used-with-external-plotly-js-in-react-pivottable/13983
+https://www.oipapio.com/question-1741908
+
+react redux links--------------------------
+https://github.com/markerikson/react-redux-links
+
+export excel files--------------------
+https://www.npmjs.com/package/react-export-excel
+
+react pdf links:---------------------------------
+https://dev.to/finallynero/generating-pdf-documents-in-react-using-react-pdf-4ka7
+https://react-pdf.org/
+https://github.com/react-pdf/site/blob/master/docs/quick-start.md#4-have-fun
+https://www.telerik.com/kendo-react-ui/components/pdfprocessing/table-headers/
+https://www.telerik.com/kendo-react-ui/components/pdfprocessing/api/PDFExportProps/

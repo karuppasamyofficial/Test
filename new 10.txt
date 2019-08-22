@@ -1,0 +1,50 @@
+import React, { Component } from "react";
+import "./App.css";
+import api from "../api/Api";
+import { apiConfig } from "../api-config";
+// import { userName } from '../Constants/Constants';
+class MaterialRequest extends Component {
+  constructor() {
+    super();
+    this.state = { response: [] };
+  }
+  render() {
+    return (
+      <div className="main-wrapper">
+        <div className="main-menu-title">Material Request from Stores</div>
+        {this.getMaterialRequest()}
+      </div>
+    );
+  }
+
+  renderTable(materials) {
+    console.log(materials);
+    return materials.map(material => {
+      return (
+        <table>
+          <thead>
+            <tr>
+              <th />
+              <th>ID</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+        </table>
+      );
+    });
+  }
+
+  getMaterialRequest = () => {
+    console.log("getMaterialRequest is invoked");
+
+    api
+      .post(apiConfig.MaterialRequest + "?" + "userName" + "=" + "VSMCTFZ-1")
+      .then(res => {
+        const materials = res.data;
+        console.log("description", materials);
+        this.renderTable(materials);
+      });
+  };
+}
+
+export default MaterialRequest;

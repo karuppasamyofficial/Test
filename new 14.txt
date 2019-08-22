@@ -1,0 +1,50 @@
+
+  
+    axios({
+      url:
+        "https://downloads.mongodb.com/compass/mongodb-compass-1.18.0-win32-x64.msi",
+      //   method: "GET",
+      responseType: "blob"
+    }).then(response => {
+
+      console.log("response", response);
+      const url = window.URL.createObjectURL(
+        new Blob([response.data])
+      );
+      const link = document.createElement("a");
+      
+      link.href = url;
+      link.setAttribute("download", "file.zip");
+      document.body.appendChild(link);
+      link.click();
+    });
+	
+	
+	
+	
+	
+	
+	
+	downloadEmployeeData = () => {
+    // this.setState({ status: "start" });
+    this.props.Download_ACTION("start");
+
+    console.log("status---->" + this.props.authInfo.downloadStatus);
+    axios({
+      url: "http://speedtest.ftp.otenet.gr/files/test100Mb.db",
+
+      method: "GET",
+      headers: { "Access-Control-Allow-Origin": "*" },
+      responseType: "blob"
+    }).then(response => {
+      // this.setState({ status: "completed" });
+      this.props.Download_ACTION("completed");
+      console.log("response", response);
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "file.zip");
+      document.body.appendChild(link);
+      link.click();
+    });
+  };

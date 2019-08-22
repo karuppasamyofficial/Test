@@ -1,0 +1,99 @@
+import React, { Component } from "react";
+import "./App.css";
+import api from "../api/Api";
+import { apiConfig } from "../api-config";
+import { fetchedData } from "../actions";
+import { connect } from "react-redux";
+
+class MaterialRequest extends Component {
+ 
+
+  componentDidMount() {
+    fetchedData();
+  }
+
+  render() {
+    return (
+      <div className="main-wrapper">
+        <div className="main-menu-title">Material Request from Stores</div>
+        <div>
+          <table>
+          <tbody>{this.renderTable()}</tbody>
+
+               
+        </table>
+         </div>
+      </div>
+    );
+  }
+
+  renderTable = () => {
+
+    console.log('rendertable is invoked');
+    const materials = this.props.materialInfo;
+      console.log('materials', materials);
+      materials.map(material => {
+      return (
+        <tr >
+          <td>{material.description}</td>
+        </tr>
+      );
+    });
+  };
+
+  
+}
+const mapStateToProps = state => {
+
+  return { materialInfo: state.materialInfo };
+};
+export default connect(
+  mapStateToProps,
+  fetchedData
+)(MaterialRequest);
+
+
+
+arry.forEach(function(element) { element.Active = "false"; });
+
+
+
+
+
+
+ "itemId":107003,
+         "itemCode":0,
+         "description":null,
+         "quantity":"2",
+         "uomCode":null,
+         "userName":null,
+         "headerId":1394016,
+         "price":0.0,
+         "focFlag":null,
+         "quantityOnHand":null,
+         "invoiceNum":null,
+         "location":null,
+         "receiptNum":null,
+         "foc":null,
+         "vehicleNo":null,
+         "orderCategory":null,
+         "status":false
+		 
+		 itemId: 100773, itemDescription: "Taybat chilled mixed cut chicken 700gm
+		 
+		 foc: null
+focFlag: null
+headerId: 1299558
+invoiceNum: null
+itemCode: 10113121279
+itemId: 107018
+location: null
+orderCategory: null
+price: 0
+quantity: null
+quantityOnHand: null
+receiptNum: null
+status: false
+uomCode: "PKT"
+userName: "VSMCTCH-1"
+vehicleNo

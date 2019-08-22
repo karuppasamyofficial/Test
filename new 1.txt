@@ -1,0 +1,34 @@
+<i class="sun icon"></i><i class="snowflake icon"></i>
+
+
+974cf704a019b0e3ce2705820a4c3b8f03a796d8dbf49432d0f0f954043a4fab
+
+
+
+3963ddc3e99a11241a747d513734b635de9279f8a3398ec5aa665326016825bf
+
+
+
+youTube Api AIzaSyCXel3W54GSWGzheJcZpju9HDSWDPEhWwg
+
+
+  1904006050
+  
+  
+  
+  npm install --save redux react-redux
+  
+  
+  
+  
+  import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
+
+ReactDOM.render(<App />,document.querySelector('#root')) ;
+
+
+npm install --save redux react-redux axios redux-thunk
+
+
+npm install --save react-router-dom

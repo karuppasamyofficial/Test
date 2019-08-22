@@ -1,0 +1,78 @@
+ axios({
+            url: "https://get.geojs.io/v1/ip/geo.json",
+        //   method: "GET",
+          responseType: "blob",
+        
+        }).then(response => {
+          const url = window.URL.createObjectURL(
+            new Blob([response.data])
+          );
+          const link = document.createElement("a");
+          link.href = url;
+          link.setAttribute("download", "file.pdf");
+          document.body.appendChild(link);
+          link.click();
+        });
+import React, { Component } from "react";
+import { ProgressBar } from "primereact/progressbar";
+import { connect } from "react-redux";
+import { Download_ACTION } from "../actions";
+import axios from "axios";
+class OnHandQuantity extends Component {
+  constructor() {
+    super();
+    this.state = {
+      status: null
+    };
+  }
+
+  downloadEmployeeData = () => {
+    // this.setState({ status: "start" });
+    this.props.SIGN_IN_ACTION("start");
+
+    console.log("status---->" + this.state.status);
+    axios({
+      url: "https://get.geojs.io/v1/ip/geo.json",
+
+      method: "GET",
+      headers: { "Access-Control-Allow-Origin": "*" },
+      responseType: "blob"
+    }).then(response => {
+      this.setState({ status: "completed" });
+      console.log("response", response);
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "file.zip");
+      document.body.appendChild(link);
+      link.click();
+    });
+  };
+
+  render() {
+    console.log("status---->" + this.state.status);
+    return (
+      <div>
+        <div id="container">
+          <button onClick={this.downloadEmployeeData}>Download</button>
+          {this.state.status === "start" ? (
+            <div>
+              <div>downloading file from server</div>
+              <ProgressBar mode="indeterminate" style={{ height: "20px" }} />
+            </div>
+          ) : this.state.status === "completed" ? (
+            <div>download completed</div>
+          ) : null}
+        </div>
+      </div>
+    );
+  }
+}
+const mapStateToProps = state => {
+  return {  authInfo: state.authInfo };
+};
+
+export default connect(
+  mapStateToProps,
+  { Download_ACTION }
+)(OnHandQuantity);

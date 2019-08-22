@@ -1,0 +1,95 @@
+   
+    https://www.htmlgoodies.com/beyond/javascript/frameworks/create-a-react-web-app-in-visual-studio-code.html
+	
+	European Computer Manufacturers Association (ECMA).
+	create-react-app my-first-react-app
+	
+	Auto linking the library
+	npm install --save faker
+	
+	
+	import the other 
+	import App from './App.jsx';
+	
+	
+	semantic ui
+	semantic ui cdn
+	
+	
+	showing custom children 
+	
+	
+	kill the port number on windows:
+	step1:netstat -ano | findstr :<yourPortNumber>
+	step:2 taskkill /PID <typeyourPIDhere> /F
+	import React from "react";
+import ReactDO from "react-dom";
+import faker from "faker";
+import ComponentDetails from "./ComponentDetails.js";
+import ApprovalCards from "./AprovalCards.js";
+const variName = "click me";
+const Appli = () => {
+  return (
+    <div>
+      {/* <div> Hi !!!!!!</div>
+      <button>{variName}</button> */}
+
+      <div>{/* <img src={faker.image.city()} /> */}</div>
+      <div class="ui container elements" >
+
+              <ApprovalCards >
+
+                  <div><h4>warning</h4>Are you sure you want to do this</div>
+              </ApprovalCards>
+      <ApprovalCards >
+      <ComponentDetails author="sam" />
+      </ApprovalCards>
+      <ApprovalCards>
+      <ComponentDetails author="karuppasamy" />
+      </ApprovalCards>
+      </div>
+    </div>
+  );
+};
+ReactDO.render(<Appli />, document.querySelector("#root"));
+
+
+
+
+class base com
+
+
+
+ if (this.state.ErrorMessage && !this.state.lat) {
+          return <SeasonDisplay lat={this.state.lat} />;
+      }
+	  
+	  
+	  last month itself i asked about to change CTC sir
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	   xxmo_sa_invoice_pkg.get_return_status@ebs(:P_JOB_CRD_ID) as Status from dual
+	  

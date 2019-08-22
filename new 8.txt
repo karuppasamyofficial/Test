@@ -1,0 +1,53 @@
+
+As we were not aware of the Client Holiday on 4th of April , We Both Myself and Karuppasamy  came to Office and worked on that day. So we Please Request you to give us Approval for a Compensation Leave.
+
+ 
+
+Name: Gowtham Jayakumar
+
+Emp Id: 751
+
+ 
+
+Name : Karrupasamy
+
+Emp Id : 719
+
+selectFruit(e) {
+    if(e.target.checked) {
+      this.setState({
+        fruits: [ ...this.state.fruits, e.target.value],
+      }, () => {
+        console.log(this.state.fruits);
+      });
+    }
+  }
+  
+  updating the array value on click of check box:
+  
+  selectFruit(e) {
+    if(e.target.checked) {
+      this.setState({
+        fruits: [ ...this.state.fruits, e.target.value],
+      }, () => {
+        console.log(this.state.fruits);
+      });
+    }
+  }
+  
+  
+  Adding Array of Objects
+  
+  this.setState({
+  fruits: [ ...this.state.fruits, {
+  	'id': e.target.id,
+  	'value': e.target.value
+  }],
+});
+
+Removing Array of objects  
+let remove = this.state.fruits.map(function(item) { return item.value; })
+                   .indexOf(e.target.value);
+this.setState({
+  fruits: this.state.fruits.filter((_, i) => i !== remove)
+});
